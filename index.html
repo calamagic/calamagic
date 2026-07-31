@@ -190,6 +190,19 @@
   .agitate p{ font-size:1.25rem; color:var(--ivory); font-family:'Fraunces', serif; font-weight:400; line-height:1.5; }
   .agitate p.small{ font-family:'Work Sans',sans-serif; font-size:1rem; color:var(--muted); margin-top:20px; }
 
+  .video-presentacion{
+    max-width:760px;
+    margin:44px auto 0;
+    border:1px solid var(--gold-dim);
+    background:#000;
+    aspect-ratio:16/9;
+  }
+  .video-presentacion iframe{
+    width:100%; height:100%;
+    display:block;
+    border:none;
+  }
+
   /* ---------- Value bullets ---------- */
   .value-grid{
     display:grid;
@@ -360,13 +373,51 @@
   .testi-who .name{ font-weight:600; font-size:0.9rem; }
   .testi-who .role{ font-size:0.78rem; color:var(--muted); }
 
-  .gallery-strip{
-    display:flex; gap:14px; margin-top:40px; overflow-x:auto; padding-bottom:8px;
+  .video-gallery-head{
+    text-align:center;
+    margin:56px 0 28px;
   }
-  .gallery-strip img{
-    height:220px; width:auto; flex-shrink:0;
-    filter:grayscale(15%) contrast(1.05);
-    border:1px solid var(--line);
+  .video-gallery-head .eyebrow{ display:block; margin-bottom:10px; }
+  .video-gallery-head h3{ font-size:1.4rem; }
+  .video-carousel{
+    display:flex;
+    gap:18px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    padding-bottom:16px;
+    scrollbar-width:thin;
+    scrollbar-color:var(--gold-dim) transparent;
+  }
+  .video-carousel::-webkit-scrollbar{ height:6px; }
+  .video-carousel::-webkit-scrollbar-thumb{ background:var(--gold-dim); }
+  .video-carousel::-webkit-scrollbar-track{ background:transparent; }
+  .video-card{
+    position:relative;
+    flex:0 0 auto;
+    width:230px;
+    aspect-ratio:9/16;
+    border:1px solid var(--gold-dim);
+    background:#000;
+    overflow:hidden;
+    scroll-snap-align:start;
+  }
+  .video-card video, .video-card iframe{
+    width:100%; height:100%;
+    object-fit:cover;
+    display:block;
+    background:#000;
+    border:none;
+  }
+  .carousel-hint{
+    text-align:center;
+    color:var(--gold-dim);
+    font-size:0.78rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    margin-top:14px;
+  }
+  @media (max-width: 860px){
+    .video-card{ width:180px; }
   }
 
   /* ---------- FAQ ---------- */
@@ -468,6 +519,9 @@
     <div class="agitate">
       <p>Cualquiera puede poner buena comida y buena música. Muy pocos anfitriones logran que sus invitados sigan hablando del evento semanas después.</p>
       <p class="small">Ese es exactamente el momento que Cala Magic pone en tu evento.</p>
+    </div>
+    <div class="video-presentacion">
+      <iframe src="https://www.youtube.com/embed/v2ny9A0qfKk" title="Cala Magic - Presentación" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </section>
 
@@ -617,12 +671,21 @@
         </div>
       </div>
     </div>
-    <div class="gallery-strip">
-      <img src="https://static.wixstatic.com/media/1cf13f_8406b8dd8d354a1caa99c5d13143acd3f000.jpg" alt="Momento del show Cala Magic">
-      <img src="https://static.wixstatic.com/media/1cf13f_c0cb6d0f564e4d0da41e288a3b0b9de9f000.jpg" alt="Momento del show Cala Magic">
-      <img src="https://static.wixstatic.com/media/1cf13f_5c4a62c250464da7a24a7e1e3c4d7faff002.jpg" alt="Momento del show Cala Magic">
-      <img src="https://static.wixstatic.com/media/1cf13f_63540f84ed784f259bfe27aa2aa28606f001.jpg" alt="Momento del show Cala Magic">
+    <div class="video-gallery-head">
+      <span class="eyebrow">Reacciones reales</span>
+      <h3>Así reaccionan en el momento</h3>
     </div>
+    <div class="video-carousel">
+      <div class="video-card"><iframe src="https://www.youtube.com/embed/FrvHGK1KmL8" title="Testimonio de Carla" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video-card"><iframe src="https://www.youtube.com/embed/si2Nmkrysj0" title="Testimonio de Emanuel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video-card"><iframe src="https://www.youtube.com/embed/vdoct5qNZYs" title="Testimonio de Sebastián" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video-card"><iframe src="https://www.youtube.com/embed/lmUhGHluWwg" title="Testimonio de Cami" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video-card"><iframe src="https://www.youtube.com/embed/W2GfxUA-XMA" title="Testimonio de Betty" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video-card"><iframe src="https://www.youtube.com/embed/Oy8g2jk853o" title="Testimonio de Carlos" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video-card"><iframe src="https://www.youtube.com/embed/ncyubWY0UAM" title="Espectadora del show" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video-card"><iframe src="https://www.youtube.com/embed/22CsyYCay6o" title="Testimonio de Lara" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    </div>
+    <p class="carousel-hint">← Deslizá para ver más →</p>
   </section>
 
   <div class="divider"><div class="line"></div><span class="mark">✦</span><div class="line"></div></div>
