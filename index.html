@@ -499,6 +499,15 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1005275982490250&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+<!-- Microsoft Clarity Code -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xxoooxzn3d");
+</script>
+<!-- End Microsoft Clarity Code -->
 </head>
 <body>
 
@@ -538,7 +547,7 @@ src="https://www.facebook.com/tr?id=1005275982490250&ev=PageView&noscript=1"
       <p class="small">Ese es exactamente el momento que Cala Magic pone en tu evento.</p>
     </div>
     <div class="video-presentacion">
-      <iframe src="https://www.youtube.com/embed/v2ny9A0qfKk" title="Cala Magic - Presentación" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe id="yt-presentacion" src="https://www.youtube.com/embed/v2ny9A0qfKk?enablejsapi=1&rel=0" title="Cala Magic - Presentación" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </section>
 
@@ -578,7 +587,7 @@ src="https://www.facebook.com/tr?id=1005275982490250&ev=PageView&noscript=1"
       <p>Tocá cada carta para ver el detalle completo.</p>
     </div>
     <div class="offers">
-      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card" data-format="magia-de-cerca" onclick="this.classList.toggle('flipped'); trackFormatCard(this)">
         <div class="flip-inner">
           <div class="flip-face flip-front">
             <div class="letter">A</div>
@@ -603,7 +612,7 @@ src="https://www.facebook.com/tr?id=1005275982490250&ev=PageView&noscript=1"
         </div>
       </div>
 
-      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card" data-format="show-de-salon" onclick="this.classList.toggle('flipped'); trackFormatCard(this)">
         <div class="flip-inner">
           <div class="flip-face flip-front">
             <div class="letter">B</div>
@@ -693,14 +702,14 @@ src="https://www.facebook.com/tr?id=1005275982490250&ev=PageView&noscript=1"
       <h3>Así reaccionan en el momento</h3>
     </div>
     <div class="video-carousel">
-      <div class="video-card"><iframe src="https://www.youtube.com/embed/FrvHGK1KmL8" title="Testimonio de Carla" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="video-card"><iframe src="https://www.youtube.com/embed/si2Nmkrysj0" title="Testimonio de Emanuel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="video-card"><iframe src="https://www.youtube.com/embed/vdoct5qNZYs" title="Testimonio de Sebastián" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="video-card"><iframe src="https://www.youtube.com/embed/lmUhGHluWwg" title="Testimonio de Cami" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="video-card"><iframe src="https://www.youtube.com/embed/W2GfxUA-XMA" title="Testimonio de Betty" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="video-card"><iframe src="https://www.youtube.com/embed/Oy8g2jk853o" title="Testimonio de Carlos" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="video-card"><iframe src="https://www.youtube.com/embed/ncyubWY0UAM" title="Espectadora del show" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="video-card"><iframe src="https://www.youtube.com/embed/22CsyYCay6o" title="Testimonio de Lara" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video-card"><iframe id="yt-testimonio-carla" src="https://www.youtube.com/embed/FrvHGK1KmL8?enablejsapi=1&rel=0" title="Testimonio de Carla" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video-card"><iframe id="yt-testimonio-emanuel" src="https://www.youtube.com/embed/si2Nmkrysj0?enablejsapi=1&rel=0" title="Testimonio de Emanuel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video-card"><iframe id="yt-testimonio-sebastian" src="https://www.youtube.com/embed/vdoct5qNZYs?enablejsapi=1&rel=0" title="Testimonio de Sebastián" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video-card"><iframe id="yt-testimonio-cami" src="https://www.youtube.com/embed/lmUhGHluWwg?enablejsapi=1&rel=0" title="Testimonio de Cami" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video-card"><iframe id="yt-testimonio-betty" src="https://www.youtube.com/embed/W2GfxUA-XMA?enablejsapi=1&rel=0" title="Testimonio de Betty" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video-card"><iframe id="yt-testimonio-carlos" src="https://www.youtube.com/embed/Oy8g2jk853o?enablejsapi=1&rel=0" title="Testimonio de Carlos" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video-card"><iframe id="yt-testimonio-espectadora" src="https://www.youtube.com/embed/ncyubWY0UAM?enablejsapi=1&rel=0" title="Espectadora del show" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video-card"><iframe id="yt-testimonio-lara" src="https://www.youtube.com/embed/22CsyYCay6o?enablejsapi=1&rel=0" title="Testimonio de Lara" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     </div>
     <p class="carousel-hint">← Deslizá para ver más →</p>
   </section>
@@ -758,5 +767,92 @@ src="https://www.facebook.com/tr?id=1005275982490250&ev=PageView&noscript=1"
   </div>
 </footer>
 
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+  // ---------- Helper: manda el evento a Clarity y a Meta juntos ----------
+  function track(eventName, params) {
+    try { if (window.clarity) window.clarity("event", eventName); } catch(e) {}
+    try { if (window.fbq) fbq('trackCustom', eventName, params || {}); } catch(e) {}
+    console.log('[track]', eventName, params || '');
+  }
+
+  // ---------- Tarjetas de formato A/B ----------
+  function trackFormatCard(cardEl) {
+    if (cardEl.dataset.tracked === "true") return; // solo la primera vez
+    cardEl.dataset.tracked = "true";
+    var formato = cardEl.getAttribute('data-format');
+    track('ViewedFormat_' + formato, { formato: formato });
+  }
+
+  // ---------- Scroll depth ----------
+  (function(){
+    var milestones = [25, 50, 75, 100];
+    var fired = {};
+    window.addEventListener('scroll', function(){
+      var scrollTop = window.scrollY;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight <= 0) return;
+      var pct = Math.round((scrollTop / docHeight) * 100);
+      milestones.forEach(function(m){
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          track('Scroll_' + m + 'pct', { percent: m });
+        }
+      });
+    }, { passive: true });
+  })();
+
+  // ---------- Videos de YouTube (presentación + 8 testimonios) ----------
+  var videoConfigs = [
+    { id: 'yt-presentacion', name: 'presentacion', milestones: [25, 50, 75, 100] },
+    { id: 'yt-testimonio-carla', name: 'testimonio_carla', milestones: [50, 100] },
+    { id: 'yt-testimonio-emanuel', name: 'testimonio_emanuel', milestones: [50, 100] },
+    { id: 'yt-testimonio-sebastian', name: 'testimonio_sebastian', milestones: [50, 100] },
+    { id: 'yt-testimonio-cami', name: 'testimonio_cami', milestones: [50, 100] },
+    { id: 'yt-testimonio-betty', name: 'testimonio_betty', milestones: [50, 100] },
+    { id: 'yt-testimonio-carlos', name: 'testimonio_carlos', milestones: [50, 100] },
+    { id: 'yt-testimonio-espectadora', name: 'testimonio_espectadora', milestones: [50, 100] },
+    { id: 'yt-testimonio-lara', name: 'testimonio_lara', milestones: [50, 100] }
+  ];
+
+  function onYouTubeIframeAPIReady() {
+    videoConfigs.forEach(function(cfg){
+      var el = document.getElementById(cfg.id);
+      if (!el) return;
+      var firedMap = {};
+      var playedTracked = false;
+      new YT.Player(cfg.id, {
+        events: {
+          'onStateChange': function(event) {
+            if (event.data === YT.PlayerState.PLAYING) {
+              if (!playedTracked) {
+                playedTracked = true;
+                track('VideoPlay_' + cfg.name, { video: cfg.name });
+              }
+              // arranca el polling de progreso mientras se reproduce
+              var player = event.target;
+              var interval = setInterval(function(){
+                if (player.getPlayerState() !== YT.PlayerState.PLAYING) {
+                  clearInterval(interval);
+                  return;
+                }
+                var duration = player.getDuration();
+                var current = player.getCurrentTime();
+                if (!duration) return;
+                var pct = Math.floor((current / duration) * 100);
+                cfg.milestones.forEach(function(m){
+                  if (pct >= m && !firedMap[m]) {
+                    firedMap[m] = true;
+                    track('VideoProgress_' + cfg.name + '_' + m + 'pct', { video: cfg.name, percent: m });
+                  }
+                });
+              }, 1000);
+            }
+          }
+        }
+      });
+    });
+  }
+</script>
 </body>
 </html>
