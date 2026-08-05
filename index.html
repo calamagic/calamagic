@@ -482,13 +482,30 @@
     header .btn span.long{ display:none; }
   }
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1005275982490250');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1005275982490250&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
 <header>
   <div class="container row">
     <div class="brand">CALA <span>MAGIC</span></div>
-    <a class="btn btn-solid" href="https://api.whatsapp.com/message/F55LED4DSSNHD1?autoload=1&app_absent=0" target="_blank" rel="noopener">
+    <a class="btn btn-solid" href="https://api.whatsapp.com/message/F55LED4DSSNHD1?autoload=1&app_absent=0" target="_blank" rel="noopener" onclick="fbq('track','Contact')">
       <span class="long">Reservar por</span> WhatsApp
     </a>
   </div>
@@ -502,7 +519,7 @@
     <h1>El momento que va a <em>quedarse hablando</em> de tu evento.</h1>
     <p class="sub">Cumpleaños, casamientos, eventos corporativos. Una experiencia de mentalismo y magia en vivo pensada para adultos escépticos — no para niños con conejos.</p>
     <div class="hero-ctas">
-      <a class="btn btn-solid" href="https://api.whatsapp.com/message/F55LED4DSSNHD1?autoload=1&app_absent=0" target="_blank" rel="noopener">Contame tu evento →</a>
+      <a class="btn btn-solid" href="https://api.whatsapp.com/message/F55LED4DSSNHD1?autoload=1&app_absent=0" target="_blank" rel="noopener" onclick="fbq('track','Contact')">Contame tu evento →</a>
       <a class="btn btn-ghost" href="#formatos">Ver formatos</a>
     </div>
     <div class="trust-row">
@@ -726,7 +743,7 @@
       <span class="eyebrow">Agenda limitada cada mes</span>
       <h2>Contame de tu evento y armamos la experiencia.</h2>
       <p>Cumpleaños, casamiento, evento corporativo — contame los detalles y te respondo con el formato ideal para tu fecha.</p>
-      <a class="btn btn-solid" href="https://api.whatsapp.com/message/F55LED4DSSNHD1?autoload=1&app_absent=0" target="_blank" rel="noopener">Escribir por WhatsApp →</a>
+      <a class="btn btn-solid" href="https://api.whatsapp.com/message/F55LED4DSSNHD1?autoload=1&app_absent=0" target="_blank" rel="noopener" onclick="fbq('track','Contact')">Escribir por WhatsApp →</a>
     </div>
   </section>
 
@@ -737,7 +754,7 @@
   <div>Magia y mentalismo para eventos privados</div>
   <div class="flinks">
     <a href="https://www.instagram.com/calamagicok/" target="_blank" rel="noopener">Instagram</a>
-    <a href="https://api.whatsapp.com/message/F55LED4DSSNHD1?autoload=1&app_absent=0" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://api.whatsapp.com/message/F55LED4DSSNHD1?autoload=1&app_absent=0" target="_blank" rel="noopener" onclick="fbq('track','Contact')">WhatsApp</a>
   </div>
 </footer>
 
